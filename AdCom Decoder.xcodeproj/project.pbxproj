@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B980E43723AE8B0C00741286 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E43623AE8B0C00741286 /* main.swift */; };
+		B980E44423AFA3DC00741286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E44323AFA3DC00741286 /* AppDelegate.swift */; };
+		B980E44623AFA3DC00741286 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E44523AFA3DC00741286 /* ContentView.swift */; };
+		B980E44823AFA3E200741286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B980E44723AFA3E200741286 /* Assets.xcassets */; };
+		B980E44B23AFA3E200741286 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B980E44A23AFA3E200741286 /* Preview Assets.xcassets */; };
+		B980E44E23AFA3E200741286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B980E44C23AFA3E200741286 /* Main.storyboard */; };
+		B980E45623B0317800741286 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B980E45523B0317800741286 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,15 @@
 /* Begin PBXFileReference section */
 		B980E43323AE8B0B00741286 /* AdCom Decoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AdCom Decoder"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B980E43623AE8B0C00741286 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B980E44123AFA3DC00741286 /* AdCom Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdCom Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B980E44323AFA3DC00741286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B980E44523AFA3DC00741286 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B980E44723AFA3E200741286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B980E44A23AFA3E200741286 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B980E44D23AFA3E200741286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B980E44F23AFA3E200741286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B980E45023AFA3E200741286 /* AdCom_Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdCom_Helper.entitlements; sourceTree = "<group>"; };
+		B980E45523B0317800741286 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +50,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B980E43E23AFA3DC00741286 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B980E45623B0317800741286 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,7 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				B980E43523AE8B0B00741286 /* AdCom Decoder */,
+				B980E44223AFA3DC00741286 /* AdCom Helper */,
 				B980E43423AE8B0B00741286 /* Products */,
+				B980E45423B0317800741286 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				B980E43323AE8B0B00741286 /* AdCom Decoder */,
+				B980E44123AFA3DC00741286 /* AdCom Helper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +86,36 @@
 				B980E43623AE8B0C00741286 /* main.swift */,
 			);
 			path = "AdCom Decoder";
+			sourceTree = "<group>";
+		};
+		B980E44223AFA3DC00741286 /* AdCom Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B980E44323AFA3DC00741286 /* AppDelegate.swift */,
+				B980E44523AFA3DC00741286 /* ContentView.swift */,
+				B980E44723AFA3E200741286 /* Assets.xcassets */,
+				B980E44C23AFA3E200741286 /* Main.storyboard */,
+				B980E44F23AFA3E200741286 /* Info.plist */,
+				B980E45023AFA3E200741286 /* AdCom_Helper.entitlements */,
+				B980E44923AFA3E200741286 /* Preview Content */,
+			);
+			path = "AdCom Helper";
+			sourceTree = "<group>";
+		};
+		B980E44923AFA3E200741286 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B980E44A23AFA3E200741286 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B980E45423B0317800741286 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B980E45523B0317800741286 /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +138,23 @@
 			productReference = B980E43323AE8B0B00741286 /* AdCom Decoder */;
 			productType = "com.apple.product-type.tool";
 		};
+		B980E44023AFA3DC00741286 /* AdCom Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B980E45123AFA3E200741286 /* Build configuration list for PBXNativeTarget "AdCom Helper" */;
+			buildPhases = (
+				B980E43D23AFA3DC00741286 /* Sources */,
+				B980E43E23AFA3DC00741286 /* Frameworks */,
+				B980E43F23AFA3DC00741286 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AdCom Helper";
+			productName = "AdCom Helper";
+			productReference = B980E44123AFA3DC00741286 /* AdCom Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +166,9 @@
 				ORGANIZATIONNAME = "Julian Dunskus";
 				TargetAttributes = {
 					B980E43223AE8B0B00741286 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					B980E44023AFA3DC00741286 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
@@ -111,9 +187,23 @@
 			projectRoot = "";
 			targets = (
 				B980E43223AE8B0B00741286 /* AdCom Decoder */,
+				B980E44023AFA3DC00741286 /* AdCom Helper */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B980E43F23AFA3DC00741286 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B980E44E23AFA3E200741286 /* Main.storyboard in Resources */,
+				B980E44B23AFA3E200741286 /* Preview Assets.xcassets in Resources */,
+				B980E44823AFA3E200741286 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B980E42F23AE8B0B00741286 /* Sources */ = {
@@ -124,7 +214,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B980E43D23AFA3DC00741286 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B980E44623AFA3DC00741286 /* ContentView.swift in Sources */,
+				B980E44423AFA3DC00741286 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B980E44C23AFA3E200741286 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B980E44D23AFA3E200741286 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B980E43823AE8B0C00741286 /* Debug */ = {
@@ -262,6 +372,52 @@
 			};
 			name = Release;
 		};
+		B980E45223AFA3E200741286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AdCom Helper/AdCom_Helper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"AdCom Helper/Preview Content\"";
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "AdCom Helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.AdCom-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B980E45323AFA3E200741286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AdCom Helper/AdCom_Helper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"AdCom Helper/Preview Content\"";
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "AdCom Helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.AdCom-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -279,6 +435,15 @@
 			buildConfigurations = (
 				B980E43B23AE8B0C00741286 /* Debug */,
 				B980E43C23AE8B0C00741286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B980E45123AFA3E200741286 /* Build configuration list for PBXNativeTarget "AdCom Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B980E45223AFA3E200741286 /* Debug */,
+				B980E45323AFA3E200741286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

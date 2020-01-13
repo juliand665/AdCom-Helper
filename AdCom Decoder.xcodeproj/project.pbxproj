@@ -17,6 +17,14 @@
 		B917949D23CC175200487825 /* BinaryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949C23CC175200487825 /* BinaryDate.swift */; };
 		B917949F23CC179800487825 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949E23CC179800487825 /* Client.swift */; };
 		B91794A223CC1E6400487825 /* LogInWithGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */; };
+		B969AAEE23CCFEA70093BCC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AAED23CCFEA70093BCC3 /* AppDelegate.swift */; };
+		B969AAF023CCFEA70093BCC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AAEF23CCFEA70093BCC3 /* SceneDelegate.swift */; };
+		B969AAF223CCFEA70093BCC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AAF123CCFEA70093BCC3 /* ContentView.swift */; };
+		B969AAF423CCFEAA0093BCC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B969AAF323CCFEAA0093BCC3 /* Assets.xcassets */; };
+		B969AAF723CCFEAA0093BCC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B969AAF623CCFEAA0093BCC3 /* Preview Assets.xcassets */; };
+		B969AAFA23CCFEAA0093BCC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B969AAF823CCFEAA0093BCC3 /* LaunchScreen.storyboard */; };
+		B969AB0023CCFEFC0093BCC3 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = B969AAFF23CCFEFC0093BCC3 /* FlatBuffers */; };
+		B969AB0223CCFEFC0093BCC3 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B969AB0123CCFEFC0093BCC3 /* HandyOperators */; };
 		B980E43723AE8B0C00741286 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E43623AE8B0C00741286 /* main.swift */; };
 		B980E44423AFA3DC00741286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E44323AFA3DC00741286 /* AppDelegate.swift */; };
 		B980E44623AFA3DC00741286 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E44523AFA3DC00741286 /* ContentView.swift */; };
@@ -49,6 +57,14 @@
 		B917949C23CC175200487825 /* BinaryDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDate.swift; sourceTree = "<group>"; };
 		B917949E23CC179800487825 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInWithGameCenter.swift; sourceTree = "<group>"; };
+		B969AAEB23CCFEA70093BCC3 /* AdCom Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdCom Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B969AAED23CCFEA70093BCC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B969AAEF23CCFEA70093BCC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B969AAF123CCFEA70093BCC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B969AAF323CCFEAA0093BCC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B969AAF623CCFEAA0093BCC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B969AAF923CCFEAA0093BCC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B969AAFB23CCFEAA0093BCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B980E43323AE8B0B00741286 /* AdCom Decoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AdCom Decoder"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B980E43623AE8B0C00741286 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B980E44123AFA3DC00741286 /* AdCom Helper macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdCom Helper macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +79,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B969AAE823CCFEA70093BCC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B969AB0023CCFEFC0093BCC3 /* FlatBuffers in Frameworks */,
+				B969AB0223CCFEFC0093BCC3 /* HandyOperators in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B980E43023AE8B0B00741286 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,12 +132,35 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		B969AAEC23CCFEA70093BCC3 /* AdCom Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B969AAED23CCFEA70093BCC3 /* AppDelegate.swift */,
+				B969AAEF23CCFEA70093BCC3 /* SceneDelegate.swift */,
+				B969AAF123CCFEA70093BCC3 /* ContentView.swift */,
+				B969AAF323CCFEAA0093BCC3 /* Assets.xcassets */,
+				B969AAF823CCFEAA0093BCC3 /* LaunchScreen.storyboard */,
+				B969AAFB23CCFEAA0093BCC3 /* Info.plist */,
+				B969AAF523CCFEAA0093BCC3 /* Preview Content */,
+			);
+			path = "AdCom Helper";
+			sourceTree = "<group>";
+		};
+		B969AAF523CCFEAA0093BCC3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B969AAF623CCFEAA0093BCC3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		B980E42A23AE8B0B00741286 = {
 			isa = PBXGroup;
 			children = (
-				B980E43523AE8B0B00741286 /* AdCom Decoder */,
-				B980E44223AFA3DC00741286 /* AdCom Helper macOS */,
 				B917948B23CB967A00487825 /* Shared */,
+				B980E43523AE8B0B00741286 /* AdCom Decoder */,
+				B969AAEC23CCFEA70093BCC3 /* AdCom Helper */,
+				B980E44223AFA3DC00741286 /* AdCom Helper macOS */,
 				B980E43423AE8B0B00741286 /* Products */,
 				B980E45423B0317800741286 /* Frameworks */,
 				B917948A23CB966500487825 /* swift */,
@@ -124,6 +172,7 @@
 			children = (
 				B980E43323AE8B0B00741286 /* AdCom Decoder */,
 				B980E44123AFA3DC00741286 /* AdCom Helper macOS.app */,
+				B969AAEB23CCFEA70093BCC3 /* AdCom Helper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +218,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B969AAEA23CCFEA70093BCC3 /* AdCom Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B969AAFC23CCFEAA0093BCC3 /* Build configuration list for PBXNativeTarget "AdCom Helper" */;
+			buildPhases = (
+				B969AAE723CCFEA70093BCC3 /* Sources */,
+				B969AAE823CCFEA70093BCC3 /* Frameworks */,
+				B969AAE923CCFEA70093BCC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AdCom Helper";
+			packageProductDependencies = (
+				B969AAFF23CCFEFC0093BCC3 /* FlatBuffers */,
+				B969AB0123CCFEFC0093BCC3 /* HandyOperators */,
+			);
+			productName = "AdCom Helper";
+			productReference = B969AAEB23CCFEA70093BCC3 /* AdCom Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B980E43223AE8B0B00741286 /* AdCom Decoder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B980E43A23AE8B0C00741286 /* Build configuration list for PBXNativeTarget "AdCom Decoder" */;
@@ -217,6 +287,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Julian Dunskus";
 				TargetAttributes = {
+					B969AAEA23CCFEA70093BCC3 = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					B980E43223AE8B0B00741286 = {
 						CreatedOnToolsVersion = 11.3;
 					};
@@ -242,12 +315,23 @@
 			projectRoot = "";
 			targets = (
 				B980E43223AE8B0B00741286 /* AdCom Decoder */,
+				B969AAEA23CCFEA70093BCC3 /* AdCom Helper */,
 				B980E44023AFA3DC00741286 /* AdCom Helper macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B969AAE923CCFEA70093BCC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B969AAFA23CCFEAA0093BCC3 /* LaunchScreen.storyboard in Resources */,
+				B969AAF723CCFEAA0093BCC3 /* Preview Assets.xcassets in Resources */,
+				B969AAF423CCFEAA0093BCC3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B980E43F23AFA3DC00741286 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,6 +345,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B969AAE723CCFEA70093BCC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B969AAEE23CCFEA70093BCC3 /* AppDelegate.swift in Sources */,
+				B969AAF023CCFEA70093BCC3 /* SceneDelegate.swift in Sources */,
+				B969AAF223CCFEA70093BCC3 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B980E42F23AE8B0B00741286 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +383,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B969AAF823CCFEAA0093BCC3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B969AAF923CCFEAA0093BCC3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		B980E44C23AFA3E200741286 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,6 +402,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B969AAFD23CCFEAA0093BCC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AdCom Helper/Preview Content\"";
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "AdCom Helper/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.AdCom-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B969AAFE23CCFEAA0093BCC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AdCom Helper/Preview Content\"";
+				DEVELOPMENT_TEAM = V2EPDFA9PV;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "AdCom Helper/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "juliand665.AdCom-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		B980E43823AE8B0C00741286 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,6 +631,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B969AAFC23CCFEAA0093BCC3 /* Build configuration list for PBXNativeTarget "AdCom Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B969AAFD23CCFEAA0093BCC3 /* Debug */,
+				B969AAFE23CCFEAA0093BCC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B980E42E23AE8B0B00741286 /* Build configuration list for PBXProject "AdCom Decoder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -530,6 +686,15 @@
 			productName = FlatBuffers;
 		};
 		B917949423CBD22400487825 /* HandyOperators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B917949323CBD22400487825 /* XCRemoteSwiftPackageReference "HandyOperators" */;
+			productName = HandyOperators;
+		};
+		B969AAFF23CCFEFC0093BCC3 /* FlatBuffers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlatBuffers;
+		};
+		B969AB0123CCFEFC0093BCC3 /* HandyOperators */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B917949323CBD22400487825 /* XCRemoteSwiftPackageReference "HandyOperators" */;
 			productName = HandyOperators;

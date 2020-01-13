@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "HandyOperators",
+        "repositoryURL": "https://github.com/juliand665/HandyOperators.git",
+        "state": {
+          "branch": "master",
+          "revision": "f5243421249ee3e36126a1c0a1968ddb3a8f4e48",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

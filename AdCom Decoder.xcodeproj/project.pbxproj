@@ -3,10 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B917948E23CB969300487825 /* schema_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917948C23CB969300487825 /* schema_generated.swift */; };
+		B917949023CB96A900487825 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = B917948F23CB96A900487825 /* FlatBuffers */; };
+		B917949223CB981400487825 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949123CB981400487825 /* GetUserData.swift */; };
+		B917949523CBD22400487825 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B917949423CBD22400487825 /* HandyOperators */; };
+		B917949723CBDA3300487825 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949623CBDA3300487825 /* Communication.swift */; };
+		B917949923CC14DD00487825 /* SaveGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949823CC14DD00487825 /* SaveGameModel.swift */; };
+		B917949B23CC16EC00487825 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949A23CC16EC00487825 /* Base.swift */; };
+		B917949D23CC175200487825 /* BinaryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949C23CC175200487825 /* BinaryDate.swift */; };
+		B917949F23CC179800487825 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949E23CC179800487825 /* Client.swift */; };
+		B91794A223CC1E6400487825 /* LogInWithGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */; };
 		B980E43723AE8B0C00741286 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E43623AE8B0C00741286 /* main.swift */; };
 		B980E44423AFA3DC00741286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E44323AFA3DC00741286 /* AppDelegate.swift */; };
 		B980E44623AFA3DC00741286 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E44523AFA3DC00741286 /* ContentView.swift */; };
@@ -29,6 +39,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B917948A23CB966500487825 /* swift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = swift; path = flatbuffers/swift; sourceTree = "<group>"; };
+		B917948C23CB969300487825 /* schema_generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = schema_generated.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		B917948D23CB969300487825 /* schema.fbs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.fbs; sourceTree = "<group>"; };
+		B917949123CB981400487825 /* GetUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserData.swift; sourceTree = "<group>"; };
+		B917949623CBDA3300487825 /* Communication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
+		B917949823CC14DD00487825 /* SaveGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGameModel.swift; sourceTree = "<group>"; };
+		B917949A23CC16EC00487825 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		B917949C23CC175200487825 /* BinaryDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDate.swift; sourceTree = "<group>"; };
+		B917949E23CC179800487825 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInWithGameCenter.swift; sourceTree = "<group>"; };
 		B980E43323AE8B0B00741286 /* AdCom Decoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AdCom Decoder"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B980E43623AE8B0C00741286 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B980E44123AFA3DC00741286 /* AdCom Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdCom Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B917949023CB96A900487825 /* FlatBuffers in Frameworks */,
+				B917949523CBD22400487825 /* HandyOperators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,13 +83,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B917948B23CB967A00487825 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B917948C23CB969300487825 /* schema_generated.swift */,
+				B917948D23CB969300487825 /* schema.fbs */,
+				B917949E23CC179800487825 /* Client.swift */,
+				B917949623CBDA3300487825 /* Communication.swift */,
+				B91794A023CC197000487825 /* Requests */,
+				B917949A23CC16EC00487825 /* Base.swift */,
+				B917949C23CC175200487825 /* BinaryDate.swift */,
+				B917949823CC14DD00487825 /* SaveGameModel.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B91794A023CC197000487825 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				B917949123CB981400487825 /* GetUserData.swift */,
+				B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		B980E42A23AE8B0B00741286 = {
 			isa = PBXGroup;
 			children = (
 				B980E43523AE8B0B00741286 /* AdCom Decoder */,
 				B980E44223AFA3DC00741286 /* AdCom Helper */,
+				B917948B23CB967A00487825 /* Shared */,
 				B980E43423AE8B0B00741286 /* Products */,
 				B980E45423B0317800741286 /* Frameworks */,
+				B917948A23CB966500487825 /* swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +182,10 @@
 			dependencies = (
 			);
 			name = "AdCom Decoder";
+			packageProductDependencies = (
+				B917948F23CB96A900487825 /* FlatBuffers */,
+				B917949423CBD22400487825 /* HandyOperators */,
+			);
 			productName = "AdCom Decoder";
 			productReference = B980E43323AE8B0B00741286 /* AdCom Decoder */;
 			productType = "com.apple.product-type.tool";
@@ -182,6 +234,9 @@
 				Base,
 			);
 			mainGroup = B980E42A23AE8B0B00741286;
+			packageReferences = (
+				B917949323CBD22400487825 /* XCRemoteSwiftPackageReference "HandyOperators" */,
+			);
 			productRefGroup = B980E43423AE8B0B00741286 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,7 +265,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B917949B23CC16EC00487825 /* Base.swift in Sources */,
+				B91794A223CC1E6400487825 /* LogInWithGameCenter.swift in Sources */,
+				B917949723CBDA3300487825 /* Communication.swift in Sources */,
+				B917949D23CC175200487825 /* BinaryDate.swift in Sources */,
+				B917949923CC14DD00487825 /* SaveGameModel.swift in Sources */,
+				B917948E23CB969300487825 /* schema_generated.swift in Sources */,
 				B980E43723AE8B0C00741286 /* main.swift in Sources */,
+				B917949F23CC179800487825 /* Client.swift in Sources */,
+				B917949223CB981400487825 /* GetUserData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +512,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B917949323CBD22400487825 /* XCRemoteSwiftPackageReference "HandyOperators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/juliand665/HandyOperators.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B917948F23CB96A900487825 /* FlatBuffers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlatBuffers;
+		};
+		B917949423CBD22400487825 /* HandyOperators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B917949323CBD22400487825 /* XCRemoteSwiftPackageReference "HandyOperators" */;
+			productName = HandyOperators;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B980E42B23AE8B0B00741286 /* Project object */;
 }

@@ -1,76 +1,40 @@
 import Foundation
+import FlatBuffers
 
-extension Data {
-	init(hex: String) {
-		self.init(
-			sequence(state: hex[...]) { hex -> UInt8? in
-				guard !hex.isEmpty else { return nil }
-				defer { hex.removeFirst(2) }
-				return UInt8(hex.prefix(2), radix: 16)!
-			}
-		)
-	}
-	
-	func unsafeCast<T>(to type: T.Type = T.self) -> T {
-		withUnsafeBytes { ($0 as UnsafeRawBufferPointer).load(as: T.self) }
+let documentsURL = try FileManager.default.url(
+	for: .documentDirectory,
+	in: .userDomainMask,
+	appropriateFor: nil,
+	create: false
+)
+let responseURL = documentsURL
+	.appendingPathComponent("Games")
+	.appendingPathComponent("AdVenture Communist")
+	.appendingPathComponent("Reverse Engineering")
+	.appendingPathComponent("response.json")
+
+let rawResponse = try Data(contentsOf: responseURL)
+let response = try decoder.decode(
+	ServerResponse<GetUserData.Response>.self,
+	from: rawResponse
+)
+
+func dumpData(for userData: GetUserData.Response) {
+	for rawModel in [userData.data.motherlandGameModel, userData.data.eventGameModel] {
+		let buffer = ByteBuffer(data: rawModel.data)
+		let rawModel = AdCom.SaveGameModel.getRootAsSaveGameModel(bb: buffer)
+		let model = SaveGameModel(rawModel)
+		dump(model)
 	}
 }
+//dumpData(for: response.contents!)
 
-struct Reader {
-	var data: Data
-	var position = 0
-	
-	var count: Int { data.count }
-	var isDone: Bool { position >= count - 1 }
-	
-	mutating func readBytes(_ count: Int) -> Data {
-		precondition(position + count <= data.count)
-		defer { position += count }
-		return data[position..<position + count]
-	}
-	
-	mutating func readValue<T>() -> T {
-		align(for: T.self)
-		return readBytes(MemoryLayout<T>.size).unsafeCast()
-	}
-	
-	mutating func readString() -> String {
-		defer { position += 1 }
-		return String(bytes: readBytes(readSize()), encoding: .utf8)!
-	}
-	
-	mutating func readPaddedDouble() -> Double {
-		let start = position
-		let length = readSize()
-		defer { position = start + length }
-		return Double(bitPattern: readValue())
-	}
-	
-	mutating func readSize() -> Int {
-		Int(readValue() as Int32)
-	}
-	
-	mutating func align<T>(for type: T.Type) {
-		align(toMultipleOf: MemoryLayout<T>.alignment)
-	}
-	
-	mutating func align(toMultipleOf alignment: Int) {
-		position = ((position + alignment - 1) / alignment) * alignment
-	}
-}
+let playerID = ProcessInfo.processInfo.environment["playerID"]!
+let client = Client(playerID: playerID)
+let userData = client.send(GetUserData()).sink(
+	receiveCompletion: { _ in exit(0) },
+	receiveValue: dumpData(for:)
+)
 
-func readValues(from hex: String) {
-	let input = Data(hex: hex.filter { $0 != " " })
-
-	var reader = Reader(data: input)
-	while !reader.isDone {
-		print(reader.readValue() as Int32)
-		let value = reader.readPaddedDouble()
-		let key = reader.readString()
-		print("\(key): \(value)")
-	}
-	
-	print()
-}
-
-readValues(from: "58FCFFFF 10000000 00000000 0002CC40 00000000 06000000 74726F70 68790000 50FCFFFF 0C000000 00000000 80C6C340 10000000 636F6D72 61646567 656E6572 61746F72 00000000 A0FCFFFF 10000000 00000000 40A7ED40 00000000 07000000 636F6D72 61646500 98FCFFFF 0C000000 00000000 0060D040 0B000000 6461726B 73636965 6E636500 E0FCFFFF 10000000 00000000 0000F03F 00000000 06000000 736C6569 67680000 D8FCFFFF 0C000000 00000000 0000F03F 08000000 7265696E 64656572 00000000 20FDFFFF 10000000 00000000 0000F03F 00000000 04000000 7361636B 00000000 40FDFFFF 10000000 00000000 585D1441 00000000 0C000000 6C697474 6C656865 6C706572 00000000 68FDFFFF 10000000 00000000 0000F03F 00000000 0C000000 736E6F77 666F7274 72657373 00000000 90FDFFFF 10000000 00000000 0000F03F 00000000 04000000 79657469 00000000 B0FDFFFF 10000000 00000060 76217241 00000000 07000000 656C6674 616E6B00 A8FDFFFF 0C000000 EBA0EB2F 59B22B44 09000000 736E6F77 7A6F6F6B 61000000 F0FDFFFF 10000000 4EA4143A 4AF8EA46 00000000 07000000 736E6F77 6D656E00 E8FDFFFF 0C000000 00000000 0000F03F 09000000 69636570 616C6163 65000000 30FEFFFF 10000000 00000000 0000F03F 00000000 07000000 65787072 65737300 28FEFFFF 0C000000 00000088 288DA341 08000000 62617365 63616D70 00000000 70FEFFFF 10000000 CEF272E3 BD455444 00000000 04000000 706C6F77 00000000 68FEFFFF 0C000000 AD541F11 9E9B2347 0A000000 736E6F77 6D6F6269 6C650000 88FEFFFF 0C000000 08FD4923 3756DD49 08000000 6578706C 6F726572 00000000 D0FEFFFF 10000000 00000000 0000F03F 00000000 0E000000 73707269 6E6B6C65 64757374 65720000 F8FEFFFF 10000000 00000000 0000F03F 00000000 0D000000 636F6F6B 69656661 63746F72 79000000 F8FEFFFF 0C000000 0000007E BCD1AC41 08000000 62616B65 73686F70 00000000 40FFFFFF 10000000 6CCFC8B9 80613544 00000000 04000000 6F76656E 00000000 60FFFFFF 10000000 4D7ECC01 48F6D946 00000000 05000000 6D697865 72000000 80FFFFFF 10000000 3146361A 4C158349 00000000 06000000 72656369 70650000 A0FFFFFF 10000000 D94406C8 B1FA2C4C 00000000 05000000 62616B65 72000000 C0FFFFFF 10000000 AAF9B712 16F01043 00000000 07000000 70726573 656E7400 B8FFFFFF 0C000000 DD89F976 AACC9249 08000000 736E6F77 62616C6C 00")
+dispatchMain()
+//RunLoop.main.run()

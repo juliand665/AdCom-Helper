@@ -25,6 +25,20 @@
 		B969AAFA23CCFEAA0093BCC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B969AAF823CCFEAA0093BCC3 /* LaunchScreen.storyboard */; };
 		B969AB0023CCFEFC0093BCC3 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = B969AAFF23CCFEFC0093BCC3 /* FlatBuffers */; };
 		B969AB0223CCFEFC0093BCC3 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B969AB0123CCFEFC0093BCC3 /* HandyOperators */; };
+		B969AB0323CCFF8E0093BCC3 /* schema_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917948C23CB969300487825 /* schema_generated.swift */; };
+		B969AB0423CCFF8E0093BCC3 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949E23CC179800487825 /* Client.swift */; };
+		B969AB0523CCFF8E0093BCC3 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949623CBDA3300487825 /* Communication.swift */; };
+		B969AB0623CCFF8E0093BCC3 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949123CB981400487825 /* GetUserData.swift */; };
+		B969AB0723CCFF8E0093BCC3 /* LogInWithGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */; };
+		B969AB0823CCFF8E0093BCC3 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949A23CC16EC00487825 /* Base.swift */; };
+		B969AB0923CCFF8E0093BCC3 /* BinaryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949C23CC175200487825 /* BinaryDate.swift */; };
+		B969AB0A23CCFF8E0093BCC3 /* SaveGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949823CC14DD00487825 /* SaveGameModel.swift */; };
+		B969AB0C23CD00020093BCC3 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AB0B23CD00020093BCC3 /* PlayerManager.swift */; };
+		B969AB1123CE04480093BCC3 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AB1023CE04480093BCC3 /* ActivityIndicator.swift */; };
+		B969AB1323CE0C250093BCC3 /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AB1223CE0C240093BCC3 /* TimeProvider.swift */; };
+		B969AB1523CE583D0093BCC3 /* ControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AB1423CE583D0093BCC3 /* ControllerView.swift */; };
+		B969AB2A23CE96440093BCC3 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AB2923CE96440093BCC3 /* TimeView.swift */; };
+		B969AB2D23CE96F60093BCC3 /* SaveInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AB2C23CE96F60093BCC3 /* SaveInfoView.swift */; };
 		B980E43723AE8B0C00741286 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E43623AE8B0C00741286 /* main.swift */; };
 		B980E44423AFA3DC00741286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E44323AFA3DC00741286 /* AppDelegate.swift */; };
 		B980E44623AFA3DC00741286 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980E44523AFA3DC00741286 /* ContentView.swift */; };
@@ -65,6 +79,12 @@
 		B969AAF623CCFEAA0093BCC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B969AAF923CCFEAA0093BCC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B969AAFB23CCFEAA0093BCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B969AB0B23CD00020093BCC3 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		B969AB1023CE04480093BCC3 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		B969AB1223CE0C240093BCC3 /* TimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
+		B969AB1423CE583D0093BCC3 /* ControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerView.swift; sourceTree = "<group>"; };
+		B969AB2923CE96440093BCC3 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		B969AB2C23CE96F60093BCC3 /* SaveInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInfoView.swift; sourceTree = "<group>"; };
 		B980E43323AE8B0B00741286 /* AdCom Decoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "AdCom Decoder"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B980E43623AE8B0C00741286 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B980E44123AFA3DC00741286 /* AdCom Helper macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdCom Helper macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,7 +157,9 @@
 			children = (
 				B969AAED23CCFEA70093BCC3 /* AppDelegate.swift */,
 				B969AAEF23CCFEA70093BCC3 /* SceneDelegate.swift */,
-				B969AAF123CCFEA70093BCC3 /* ContentView.swift */,
+				B969AB2B23CE96D60093BCC3 /* Main View */,
+				B969AB1623CE58580093BCC3 /* General Views */,
+				B969AB1723CE58650093BCC3 /* Data Managers */,
 				B969AAF323CCFEAA0093BCC3 /* Assets.xcassets */,
 				B969AAF823CCFEAA0093BCC3 /* LaunchScreen.storyboard */,
 				B969AAFB23CCFEAA0093BCC3 /* Info.plist */,
@@ -152,6 +174,34 @@
 				B969AAF623CCFEAA0093BCC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B969AB1623CE58580093BCC3 /* General Views */ = {
+			isa = PBXGroup;
+			children = (
+				B969AB1423CE583D0093BCC3 /* ControllerView.swift */,
+				B969AB1023CE04480093BCC3 /* ActivityIndicator.swift */,
+				B969AB2923CE96440093BCC3 /* TimeView.swift */,
+			);
+			path = "General Views";
+			sourceTree = "<group>";
+		};
+		B969AB1723CE58650093BCC3 /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B969AB0B23CD00020093BCC3 /* PlayerManager.swift */,
+				B969AB1223CE0C240093BCC3 /* TimeProvider.swift */,
+			);
+			path = "Data Managers";
+			sourceTree = "<group>";
+		};
+		B969AB2B23CE96D60093BCC3 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				B969AAF123CCFEA70093BCC3 /* ContentView.swift */,
+				B969AB2C23CE96F60093BCC3 /* SaveInfoView.swift */,
+			);
+			path = "Main View";
 			sourceTree = "<group>";
 		};
 		B980E42A23AE8B0B00741286 = {
@@ -349,9 +399,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B969AB0323CCFF8E0093BCC3 /* schema_generated.swift in Sources */,
+				B969AB0423CCFF8E0093BCC3 /* Client.swift in Sources */,
+				B969AB0C23CD00020093BCC3 /* PlayerManager.swift in Sources */,
+				B969AB2A23CE96440093BCC3 /* TimeView.swift in Sources */,
+				B969AB0523CCFF8E0093BCC3 /* Communication.swift in Sources */,
+				B969AB1123CE04480093BCC3 /* ActivityIndicator.swift in Sources */,
+				B969AB0623CCFF8E0093BCC3 /* GetUserData.swift in Sources */,
+				B969AB0723CCFF8E0093BCC3 /* LogInWithGameCenter.swift in Sources */,
+				B969AB0823CCFF8E0093BCC3 /* Base.swift in Sources */,
+				B969AB2D23CE96F60093BCC3 /* SaveInfoView.swift in Sources */,
+				B969AB0923CCFF8E0093BCC3 /* BinaryDate.swift in Sources */,
+				B969AB0A23CCFF8E0093BCC3 /* SaveGameModel.swift in Sources */,
 				B969AAEE23CCFEA70093BCC3 /* AppDelegate.swift in Sources */,
 				B969AAF023CCFEA70093BCC3 /* SceneDelegate.swift in Sources */,
 				B969AAF223CCFEA70093BCC3 /* ContentView.swift in Sources */,
+				B969AB1323CE0C250093BCC3 /* TimeProvider.swift in Sources */,
+				B969AB1523CE583D0093BCC3 /* ControllerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

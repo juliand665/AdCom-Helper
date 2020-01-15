@@ -20,11 +20,8 @@ let response = try decoder.decode(
 )
 
 func dumpData(for userData: GetUserData.Response) {
-	for rawModel in [userData.data.motherlandGameModel, userData.data.eventGameModel] {
-		let buffer = ByteBuffer(data: rawModel.data)
-		let rawModel = AdCom.SaveGameModel.getRootAsSaveGameModel(bb: buffer)
-		let model = SaveGameModel(rawModel)
-		dump(model)
+	for rawModel in [userData.data.motherlandGameModel, userData.data.eventGameModel!] {
+		dump(rawModel.decode())
 	}
 }
 //dumpData(for: response.contents!)

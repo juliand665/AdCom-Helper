@@ -1,4 +1,5 @@
 import Foundation
+import FlatBuffers
 
 struct GetUserData: Request {
 	let requestURL = "GetUserData"
@@ -10,11 +11,17 @@ struct GetUserData: Request {
 		struct Contents: Codable {
 			var sharedGamedModel: GameModel
 			var motherlandGameModel: GameModel
-			var eventGameModel: GameModel
+			var eventGameModel: GameModel?
 			
 			struct GameModel: Codable {
 				var data: Data // base64-encoded
 				var lastUpdated: Date
+				
+				func decode() -> SaveGameModel {
+					let buffer = ByteBuffer(data: data)
+					let rawModel = AdCom.SaveGameModel.getRootAsSaveGameModel(bb: buffer)
+					return SaveGameModel(rawModel, lastUpdated: lastUpdated)
+				}
 				
 				private enum CodingKeys: String, CodingKey {
 					case data = "Value"

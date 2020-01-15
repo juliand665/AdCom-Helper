@@ -17,22 +17,41 @@ final class Client {
 		self.playerID = playerID
 	}
 	
-	func send<R>(_ request: R) -> AnyPublisher<R.Response, Error> where R: Request {
-		let response = rawRequest(for: request)
-			//.handleEvents(receiveOutput: { dump($0) })
+	func send<R>(
+		_ request: R,
+		allowingReauth: Bool = true
+	) -> AnyPublisher<R.Response, Error> where R: Request {
+		rawRequest(for: request)
 			.flatMap(dispatch(_:))
-			.tryMap({ [responseDecoder] in
-				try responseDecoder.decode(ServerResponse<R.Response>.self, from: $0)
-			})
-		// split apart for type inference with dump
-		return response
+			.decode(type: ServerResponse<R.Response>.self, decoder: responseDecoder)
 			//.handleEvents(receiveOutput: { dump($0) })
-			.map { $0.contents! } // FIXME: change to handle errors
+			.flatMap { self.extractContents(from: $0, for: request, allowingReauth: allowingReauth) }
 			.breakpointOnError()
 			.eraseToAnyPublisher()
 	}
 	
-	func rawRequest<R>(for request: R) -> AnyPublisher<URLRequest, Error> where R: Request {
+	private func extractContents<R>(
+		from response: ServerResponse<R.Response>,
+		for request: R,
+		allowingReauth: Bool
+	) -> AnyPublisher<R.Response, Error> where R: Request {
+		switch response.code {
+		case 401: // forbidden
+			if allowingReauth, request.requiresAuthentication { // the first time it happens, try to relog
+				sessionTicket = nil
+				return send(request, allowingReauth: false)
+			} else { // if it keeps happening, give up
+				return Fail(error: RequestError.forbidden)
+					.eraseToAnyPublisher()
+			}
+		default:
+			return Just(response)
+				.tryMap { try $0.contents ??? RequestError.failureResponse(response) }
+				.eraseToAnyPublisher()
+		}
+	}
+	
+	private func rawRequest<R>(for request: R) -> AnyPublisher<URLRequest, Error> where R: Request {
 		let rawRequest = Result.Publisher(.init(catching: {
 			try URLRequest(url: baseURL.appendingPathComponent(request.requestURL)) <- {
 				$0.httpBody = try requestEncoder.encode(request)
@@ -54,7 +73,7 @@ final class Client {
 		}
 	}
 	
-	func ensureSessionTicket(forceUpdate: Bool = false) -> AnyPublisher<String, Error> {
+	private func ensureSessionTicket(forceUpdate: Bool = false) -> AnyPublisher<String, Error> {
 		if !forceUpdate, let ticket = sessionTicket {
 			return Just(ticket)
 				.setFailureType(to: Error.self)
@@ -66,10 +85,15 @@ final class Client {
 		}
 	}
 	
-	func dispatch(_ rawRequest: URLRequest) -> AnyPublisher<Data, Error> {
+	private func dispatch(_ rawRequest: URLRequest) -> AnyPublisher<Data, Error> {
 		URLSession.shared.dataTaskPublisher(for: rawRequest)
 			.map { $0.data } // response code is encoded in data
 			.mapError { $0 as Error }
 			.eraseToAnyPublisher()
+	}
+	
+	enum RequestError: Swift.Error {
+		case failureResponse(Decodable)
+		case forbidden
 	}
 }

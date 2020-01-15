@@ -1,10 +1,11 @@
 import Foundation
 import HandyOperators
 
-/// 0001-01-01 00:00:00
+/// 0001-01-01 00:00:00 (mostly)
 private let theStartOfTime = DateComponents(
 	calendar: .current,
-	timeZone: TimeZone(secondsFromGMT: 0)
+	timeZone: TimeZone(secondsFromGMT: 0),
+	day: 3 // apparently, microsoft counts 2 days less between then and now than apple
 ).date!
 
 struct BinaryDate {

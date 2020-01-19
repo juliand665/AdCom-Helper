@@ -1,15 +1,30 @@
 import GameKit
 import Combine
+import AdComData
 
 final class PlayerManager: ObservableObject {
-	@Published var state = State.loading {
+	@Published private(set) var state = State.loading {
 		didSet {
 			if state.playerID != oldValue.playerID {
 				client = state.playerID.map(Client.init(playerID:))
 			}
 		}
 	}
-	@Published var client: Client?
+	
+	@Published private(set) var client: Client? {
+		didSet { loadGameModel() }
+	}
+	
+	@Published private(set) var userData: UserData?
+	
+	@Published private(set) var isLoadingModel = false
+	private var request: AnyCancellable? {
+		didSet { isLoadingModel = request != nil }
+	}
+	
+	var canLoadModel: Bool {
+		!isLoadingModel && client != nil
+	}
 	
 	init(for player: GKLocalPlayer) {
 		player.authenticateHandler = { viewController, error in
@@ -25,6 +40,28 @@ final class PlayerManager: ObservableObject {
 				self.state = .signedIn(playerID)
 			}
 		}
+	}
+	
+	func loadGameModel() {
+		guard let client = client else { return }
+		
+		isLoadingModel = true
+		request?.cancel()
+		request = client.getUserData().receive(on: RunLoop.main).sink(
+			receiveCompletion: ({
+				self.request = nil
+				switch $0 {
+				case .finished:
+					break
+				case .failure(let error):
+					self.userData = nil
+					print("error while loading game model:", error)
+				}
+			}),
+			receiveValue: ({
+				self.userData = $0.decoded()
+			})
+		)
 	}
 	
 	enum State {

@@ -4,8 +4,8 @@ import Combine
 
 let playFabTitleID = "6bf5"
 
-final class Client {
-	let playerID: String
+public final class Client {
+	public let playerID: String
 	
 	private let baseURL = URL(string: "https://\(playFabTitleID).playfabapi.com/Client")!
 	private let requestEncoder = JSONEncoder()
@@ -13,11 +13,11 @@ final class Client {
 	
 	private var sessionTicket = ProcessInfo.processInfo.environment["sessionTicket"]
 	
-	init(playerID: String) {
+	public init(playerID: String) {
 		self.playerID = playerID
 	}
 	
-	func send<R>(
+	public func send<R>(
 		_ request: R,
 		allowingReauth: Bool = true
 	) -> AnyPublisher<R.Response, Error> where R: Request {
@@ -92,7 +92,7 @@ final class Client {
 			.eraseToAnyPublisher()
 	}
 	
-	enum RequestError: Swift.Error {
+	public enum RequestError: Swift.Error {
 		case failureResponse(Decodable)
 		case forbidden
 	}

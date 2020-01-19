@@ -7,32 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B917948E23CB969300487825 /* schema_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917948C23CB969300487825 /* schema_generated.swift */; };
-		B917949023CB96A900487825 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = B917948F23CB96A900487825 /* FlatBuffers */; };
-		B917949223CB981400487825 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949123CB981400487825 /* GetUserData.swift */; };
 		B917949523CBD22400487825 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B917949423CBD22400487825 /* HandyOperators */; };
-		B917949723CBDA3300487825 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949623CBDA3300487825 /* Communication.swift */; };
-		B917949923CC14DD00487825 /* SaveGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949823CC14DD00487825 /* SaveGameModel.swift */; };
-		B917949B23CC16EC00487825 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949A23CC16EC00487825 /* Base.swift */; };
-		B917949D23CC175200487825 /* BinaryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949C23CC175200487825 /* BinaryDate.swift */; };
-		B917949F23CC179800487825 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949E23CC179800487825 /* Client.swift */; };
-		B91794A223CC1E6400487825 /* LogInWithGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */; };
+		B91F598223D12D6B00925DC0 /* AdComData in Frameworks */ = {isa = PBXBuildFile; productRef = B91F598123D12D6B00925DC0 /* AdComData */; };
+		B91F598423D12D6F00925DC0 /* AdComData in Frameworks */ = {isa = PBXBuildFile; productRef = B91F598323D12D6F00925DC0 /* AdComData */; };
+		B91F598623D409ED00925DC0 /* GameAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F598523D409ED00925DC0 /* GameAreaView.swift */; };
 		B969AAEE23CCFEA70093BCC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AAED23CCFEA70093BCC3 /* AppDelegate.swift */; };
 		B969AAF023CCFEA70093BCC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AAEF23CCFEA70093BCC3 /* SceneDelegate.swift */; };
 		B969AAF223CCFEA70093BCC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AAF123CCFEA70093BCC3 /* ContentView.swift */; };
 		B969AAF423CCFEAA0093BCC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B969AAF323CCFEAA0093BCC3 /* Assets.xcassets */; };
 		B969AAF723CCFEAA0093BCC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B969AAF623CCFEAA0093BCC3 /* Preview Assets.xcassets */; };
 		B969AAFA23CCFEAA0093BCC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B969AAF823CCFEAA0093BCC3 /* LaunchScreen.storyboard */; };
-		B969AB0023CCFEFC0093BCC3 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = B969AAFF23CCFEFC0093BCC3 /* FlatBuffers */; };
 		B969AB0223CCFEFC0093BCC3 /* HandyOperators in Frameworks */ = {isa = PBXBuildFile; productRef = B969AB0123CCFEFC0093BCC3 /* HandyOperators */; };
-		B969AB0323CCFF8E0093BCC3 /* schema_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917948C23CB969300487825 /* schema_generated.swift */; };
-		B969AB0423CCFF8E0093BCC3 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949E23CC179800487825 /* Client.swift */; };
-		B969AB0523CCFF8E0093BCC3 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949623CBDA3300487825 /* Communication.swift */; };
-		B969AB0623CCFF8E0093BCC3 /* GetUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949123CB981400487825 /* GetUserData.swift */; };
-		B969AB0723CCFF8E0093BCC3 /* LogInWithGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */; };
-		B969AB0823CCFF8E0093BCC3 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949A23CC16EC00487825 /* Base.swift */; };
-		B969AB0923CCFF8E0093BCC3 /* BinaryDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949C23CC175200487825 /* BinaryDate.swift */; };
-		B969AB0A23CCFF8E0093BCC3 /* SaveGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917949823CC14DD00487825 /* SaveGameModel.swift */; };
 		B969AB0C23CD00020093BCC3 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AB0B23CD00020093BCC3 /* PlayerManager.swift */; };
 		B969AB1123CE04480093BCC3 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AB1023CE04480093BCC3 /* ActivityIndicator.swift */; };
 		B969AB1323CE0C250093BCC3 /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B969AB1223CE0C240093BCC3 /* TimeProvider.swift */; };
@@ -61,16 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B917948A23CB966500487825 /* swift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = swift; path = flatbuffers/swift; sourceTree = "<group>"; };
-		B917948C23CB969300487825 /* schema_generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = schema_generated.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		B917948D23CB969300487825 /* schema.fbs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.fbs; sourceTree = "<group>"; };
-		B917949123CB981400487825 /* GetUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserData.swift; sourceTree = "<group>"; };
-		B917949623CBDA3300487825 /* Communication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
-		B917949823CC14DD00487825 /* SaveGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGameModel.swift; sourceTree = "<group>"; };
-		B917949A23CC16EC00487825 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
-		B917949C23CC175200487825 /* BinaryDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDate.swift; sourceTree = "<group>"; };
-		B917949E23CC179800487825 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
-		B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInWithGameCenter.swift; sourceTree = "<group>"; };
+		B91F598523D409ED00925DC0 /* GameAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAreaView.swift; sourceTree = "<group>"; };
 		B969AAEB23CCFEA70093BCC3 /* AdCom Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdCom Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B969AAED23CCFEA70093BCC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B969AAEF23CCFEA70093BCC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +72,7 @@
 		B980E44F23AFA3E200741286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B980E45023AFA3E200741286 /* AdCom_Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdCom_Helper.entitlements; sourceTree = "<group>"; };
 		B980E45523B0317800741286 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		B9C73C9C23D12602004F5047 /* AdComData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AdComData; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B969AB0023CCFEFC0093BCC3 /* FlatBuffers in Frameworks */,
 				B969AB0223CCFEFC0093BCC3 /* HandyOperators in Frameworks */,
+				B91F598223D12D6B00925DC0 /* AdComData in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,8 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B917949023CB96A900487825 /* FlatBuffers in Frameworks */,
 				B917949523CBD22400487825 /* HandyOperators in Frameworks */,
+				B91F598423D12D6F00925DC0 /* AdComData in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,30 +105,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B917948B23CB967A00487825 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				B917948C23CB969300487825 /* schema_generated.swift */,
-				B917948D23CB969300487825 /* schema.fbs */,
-				B917949E23CC179800487825 /* Client.swift */,
-				B917949623CBDA3300487825 /* Communication.swift */,
-				B91794A023CC197000487825 /* Requests */,
-				B917949A23CC16EC00487825 /* Base.swift */,
-				B917949C23CC175200487825 /* BinaryDate.swift */,
-				B917949823CC14DD00487825 /* SaveGameModel.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		B91794A023CC197000487825 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				B917949123CB981400487825 /* GetUserData.swift */,
-				B91794A123CC1E6400487825 /* LogInWithGameCenter.swift */,
-			);
-			path = Requests;
-			sourceTree = "<group>";
-		};
 		B969AAEC23CCFEA70093BCC3 /* AdCom Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B969AAF123CCFEA70093BCC3 /* ContentView.swift */,
+				B91F598523D409ED00925DC0 /* GameAreaView.swift */,
 				B969AB2C23CE96F60093BCC3 /* SaveInfoView.swift */,
 			);
 			path = "Main View";
@@ -207,13 +161,12 @@
 		B980E42A23AE8B0B00741286 = {
 			isa = PBXGroup;
 			children = (
-				B917948B23CB967A00487825 /* Shared */,
+				B9C73C9C23D12602004F5047 /* AdComData */,
 				B980E43523AE8B0B00741286 /* AdCom Decoder */,
 				B969AAEC23CCFEA70093BCC3 /* AdCom Helper */,
 				B980E44223AFA3DC00741286 /* AdCom Helper macOS */,
 				B980E43423AE8B0B00741286 /* Products */,
 				B980E45423B0317800741286 /* Frameworks */,
-				B917948A23CB966500487825 /* swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,8 +235,8 @@
 			);
 			name = "AdCom Helper";
 			packageProductDependencies = (
-				B969AAFF23CCFEFC0093BCC3 /* FlatBuffers */,
 				B969AB0123CCFEFC0093BCC3 /* HandyOperators */,
+				B91F598123D12D6B00925DC0 /* AdComData */,
 			);
 			productName = "AdCom Helper";
 			productReference = B969AAEB23CCFEA70093BCC3 /* AdCom Helper.app */;
@@ -303,8 +256,8 @@
 			);
 			name = "AdCom Decoder";
 			packageProductDependencies = (
-				B917948F23CB96A900487825 /* FlatBuffers */,
 				B917949423CBD22400487825 /* HandyOperators */,
+				B91F598323D12D6F00925DC0 /* AdComData */,
 			);
 			productName = "AdCom Decoder";
 			productReference = B980E43323AE8B0B00741286 /* AdCom Decoder */;
@@ -399,21 +352,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B969AB0323CCFF8E0093BCC3 /* schema_generated.swift in Sources */,
-				B969AB0423CCFF8E0093BCC3 /* Client.swift in Sources */,
 				B969AB0C23CD00020093BCC3 /* PlayerManager.swift in Sources */,
 				B969AB2A23CE96440093BCC3 /* TimeView.swift in Sources */,
-				B969AB0523CCFF8E0093BCC3 /* Communication.swift in Sources */,
 				B969AB1123CE04480093BCC3 /* ActivityIndicator.swift in Sources */,
-				B969AB0623CCFF8E0093BCC3 /* GetUserData.swift in Sources */,
-				B969AB0723CCFF8E0093BCC3 /* LogInWithGameCenter.swift in Sources */,
-				B969AB0823CCFF8E0093BCC3 /* Base.swift in Sources */,
 				B969AB2D23CE96F60093BCC3 /* SaveInfoView.swift in Sources */,
-				B969AB0923CCFF8E0093BCC3 /* BinaryDate.swift in Sources */,
-				B969AB0A23CCFF8E0093BCC3 /* SaveGameModel.swift in Sources */,
 				B969AAEE23CCFEA70093BCC3 /* AppDelegate.swift in Sources */,
 				B969AAF023CCFEA70093BCC3 /* SceneDelegate.swift in Sources */,
 				B969AAF223CCFEA70093BCC3 /* ContentView.swift in Sources */,
+				B91F598623D409ED00925DC0 /* GameAreaView.swift in Sources */,
 				B969AB1323CE0C250093BCC3 /* TimeProvider.swift in Sources */,
 				B969AB1523CE583D0093BCC3 /* ControllerView.swift in Sources */,
 			);
@@ -423,15 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B917949B23CC16EC00487825 /* Base.swift in Sources */,
-				B91794A223CC1E6400487825 /* LogInWithGameCenter.swift in Sources */,
-				B917949723CBDA3300487825 /* Communication.swift in Sources */,
-				B917949D23CC175200487825 /* BinaryDate.swift in Sources */,
-				B917949923CC14DD00487825 /* SaveGameModel.swift in Sources */,
-				B917948E23CB969300487825 /* schema_generated.swift in Sources */,
 				B980E43723AE8B0C00741286 /* main.swift in Sources */,
-				B917949F23CC179800487825 /* Client.swift in Sources */,
-				B917949223CB981400487825 /* GetUserData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,18 +683,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B917948F23CB96A900487825 /* FlatBuffers */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FlatBuffers;
-		};
 		B917949423CBD22400487825 /* HandyOperators */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B917949323CBD22400487825 /* XCRemoteSwiftPackageReference "HandyOperators" */;
 			productName = HandyOperators;
 		};
-		B969AAFF23CCFEFC0093BCC3 /* FlatBuffers */ = {
+		B91F598123D12D6B00925DC0 /* AdComData */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = FlatBuffers;
+			productName = AdComData;
+		};
+		B91F598323D12D6F00925DC0 /* AdComData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AdComData;
 		};
 		B969AB0123CCFEFC0093BCC3 /* HandyOperators */ = {
 			isa = XCSwiftPackageProductDependency;

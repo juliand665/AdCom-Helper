@@ -1,14 +1,14 @@
 import Foundation
 import HandyOperators
 
-protocol Request: Encodable {
+public protocol Request: Encodable {
 	associatedtype Response: Decodable
 	
 	var requestURL: String { get }
 	var requiresAuthentication: Bool { get }
 }
 
-extension Request {
+public extension Request {
 	var requiresAuthentication: Bool { true }
 }
 

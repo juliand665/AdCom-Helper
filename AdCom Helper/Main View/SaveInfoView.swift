@@ -1,4 +1,39 @@
 import SwiftUI
+import AdComData
+
+struct SaveInfoView: View {
+	let gameModel: SaveGameModel
+	
+    var body: some View {
+		let airdropInfo = gameModel.airdropInfo
+		
+		return List {
+			Section(header: Text("META")) {
+				line(label: "Last updated", gameModel.lastUpdated)
+				line(label: "Save time", gameModel.saveTime)
+				
+				line(label: "Data version", gameModel.dataVersion)
+				line(label: "Save version", gameModel.saveVersion)
+			}
+			
+			Section(header: Text("GENERAL")) {
+				line(label: "Rank", gameModel.rank)
+				line(label: "Last Supreme", gameModel.lastEarnedSupremeID ?? "<none yet>")
+			}
+			
+			Section(header: Text("AIRDROPS")) {
+				line(label: "Next airdrop", airdropInfo.nextAirdrop)
+				line(label: "Claim count", airdropInfo.claimCount)
+				line(label: "Next claim count reset", airdropInfo.nextClaimCountReset)
+				line(label: "Next ad reset", airdropInfo.nextAdReset)
+				ForEach(airdropInfo.progresses, id: \.id.rawValue) { progress in
+					line(label: "Claimed \(progress.id) ads", progress.watchCount)
+				}
+			}
+		}
+		.listStyle(GroupedListStyle())
+	}
+}
 
 private func line<V: View>(label: String, _ value: V) -> AnyView {
 	AnyView(HStack {
@@ -8,48 +43,23 @@ private func line<V: View>(label: String, _ value: V) -> AnyView {
 	})
 }
 
-struct SaveInfoView: View {
-	let gameModel: SaveGameModel
-	
-    var body: some View {
-		let airdropInfo = gameModel.airdropServiceProgress
-		
-		return List {
-			Section(header: Text("General")) {
-				line(label: "Last updated", TimeView(gameModel.lastUpdated))
-			}
-			
-			Section(header: Text("Airdrops")) {
-				line(label: "Next airdrop", TimeView(airdropInfo.nextAirdrop))
-				line(label: "Claim count", Text(verbatim: "\(airdropInfo.claimCount)"))
-				line(label: "Next claim count reset", TimeView(airdropInfo.nextClaimCountReset))
-				line(label: "Next ad reset", TimeView(airdropInfo.nextAdReset))
-				ForEach(airdropInfo.progresses, id: \.id.rawValue) { progress in
-					line(label: "Claimed \(progress.id) ads", Text("\(progress.watchCount)"))
-				}
-			}
-		}
-		.listStyle(GroupedListStyle())
-	}
+private func line(label: String, _ value: Date) -> AnyView {
+	line(label: label, TimeView(value))
 }
 
+private func line(label: String, _ value: String) -> AnyView {
+	line(label: label, Text(verbatim: value))
+}
+
+private func line(label: String, _ value: Int) -> AnyView {
+	line(label: label, Text(verbatim: "\(value)"))
+}
+
+#if DEBUG
 struct SaveInfoView_Previews: PreviewProvider {
-	static let exampleModel = SaveGameModel(
-		lastUpdated: Date(),
-		airdropServiceProgress: AirdropServiceProgress(
-			nextAdReset: Date(timeIntervalSinceNow: 3600),
-			nextClaimCountReset: Date(timeIntervalSinceNow: 1800),
-			nextAirdrop: Date(timeIntervalSinceNow: 30),
-			claimCount: 5,
-			progresses: [
-				.init(watchCount: 3, id: .comrades),
-				.init(watchCount: 5, id: .science),
-				.init(watchCount: 1, id: .other(42)),
-			]
-		)
-	)
-	
     static var previews: some View {
-        SaveInfoView(gameModel: exampleModel)
+		SaveInfoView(gameModel: .example)
+			.environmentObject(TimeProvider())
     }
 }
+#endif

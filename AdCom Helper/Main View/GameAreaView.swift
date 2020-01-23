@@ -19,11 +19,14 @@ struct GameAreaView: View {
 				ActivityIndicator(isAnimating: playerManager.isLoadingModel, style: .large)
 			}
 			.navigationBarTitle(area.name)
-				.navigationBarItems(
-					trailing: Button(
-						action: playerManager.loadGameModel
-					) { Image(systemName: "arrow.clockwise") }
-						.disabled(!playerManager.canLoadModel)
+			.navigationBarItems(
+				trailing: Button(
+					action: playerManager.loadGameModel
+				) {
+					Image(systemName: "arrow.clockwise")
+						.frame(width: 44, height: 44)
+				}
+				.disabled(!playerManager.canLoadModel)
 			)
 		}
 		.tabItem {

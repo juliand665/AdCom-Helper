@@ -16,8 +16,11 @@ struct ActivityIndicator: UIViewRepresentable {
 		}
 	}
 }
+
+#if DEBUG
 struct ActivityIndicator_Previews: PreviewProvider {
 	static var previews: some View {
 		ActivityIndicator(isAnimating: true, style: .large)
 	}
 }
+#endif
